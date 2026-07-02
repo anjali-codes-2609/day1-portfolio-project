@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: lightblue;   font-family: 'Comic Sans MS', cursive;
+        }
+        button {
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+</head>
+<body>
+    <u>
+        <h1 style="text-align: center;">
+            Guess The Fruit!
+        </h1>
+    </u>
+    <h3>
+        Score: <span id="scoreBoard">0</span>
+    </h3>
+    <h3>1. I am red and sweet.🍎:- <input type="text" id="FruitName"></h3>
+    <button type="button" id="btn1" onclick="CheckSpelling()">Check Spelling</button>
+    <p id="message"></p>
+    <h3>2. I am long and yellow.🍌:- <input type="text" id="FruitName2"></h3>
+    <button type="button" id="btn2" onclick="CheckSpelling2()">Check Spelling</button>
+    <p id="message2"></p>
+    <h3>3. I am red and green.🍉:- <input type="text" id="FruitName3"></h3>
+    <button type="button" id="btn3" onclick="CheckSpelling3()">Check Spelling</button>
+    <p id="message3"></p>
+    <h3>4. I am round and yellow .🍋:- <input type="text" id="FruitName4"></h3>
+    <button type="button" id="btn4" onclick="CheckSpelling4()">Check Spelling</button>
+    <p id="message4"></p>
+    <h3>5. I am red and sweet .🍓:- <input type="text" id="FruitName5"></h3>
+    <button type="button" id="btn5" onclick="CheckSpelling5()">Check Spelling</button>
+    <p id="message5"></p>
+</body>
+<script>
+    let score = 0;
+    let isFirstTry1 = true;
+    function CheckSpelling()
+    {
+        let userAnswer = document.getElementById("FruitName").value;
+        if (userAnswer.toUpperCase() == "APPLE")
+        {
+            document.getElementById("message").innerText = "Superb! Correct Answer";
+            document.getElementById("message").style.color = "Green";
+            if (isFirstTry1 == true)
+            {
+                score = score + 10;
+                document.getElementById("scoreBoard").innerText = score;
+            }
+                document.getElementById("btn1").disabled = true;
+        }
+        else
+        {
+           document.getElementById("message").innerText = "Oops! Try Again.";
+           document.getElementById("message").style.color = "Red";
+           isFirstTry1 = false;   
+        }
+    }
+    let isFirstTry2 = true;
+    function CheckSpelling2()
+    {
+        let userAnswer = document.getElementById("FruitName2").value;
+        if (userAnswer.toUpperCase() == "BANANA")
+        {
+            document.getElementById("message2").innerText = "Superb! Correct Answer";
+            document.getElementById("message2").style.color = "Green";
+            if (isFirstTry2 == true)
+            {
+                score = score + 10;
+                document.getElementById("scoreBoard").innerText = score;
+            }
+            document.getElementById("btn2").disabled = true;
+        }
+        else
+        {
+           document.getElementById("message2").innerText = "Oops! Try Again.";
+           document.getElementById("message2").style.color = "Red"; 
+           isFirstTry2 = false; 
+        }
+    }
+    isFirstTry3 = true;
+    function CheckSpelling3()
+    {
+        let userAnswer = document.getElementById("FruitName3").value;
+        if (userAnswer.toUpperCase() == "WATERMELON")
+        {
+            document.getElementById("message3").innerText = "Superb! Correct Answer";
+            document.getElementById("message3").style.color = "Green";
+            if (isFirstTry3 == true)
+            {
+                score = score + 10;
+                document.getElementById("scoreBoard").innerText = score;
+            }
+            document.getElementById("btn3").disabled = true;
+        }
+        else
+        {
+           document.getElementById("message3").innerText = "Oops! Try Again.";
+           document.getElementById("message3").style.color = "Red";
+           isFirstTry3 = false;  
+        }
+    }
+    let isFirstTry4 = true;
+    function CheckSpelling4()
+    {
+        let userAnswer = document.getElementById("FruitName4").value;
+        if (userAnswer.toUpperCase() == "LEMON")
+        {
+            document.getElementById("message4").innerText = "Superb! Correct Answer";
+            document.getElementById("message4").style.color = "Green";
+            if (isFirstTry4 == true)
+            {
+                score = score + 10;
+                document.getElementById("scoreBoard").innerText = score;
+            }
+            document.getElementById("btn4").disabled = true;
+        }
+        else
+        {
+           document.getElementById("message4").innerText = "Oops! Try Again.";
+           document.getElementById("message4").style.color = "Red";
+           isFirstTry4 = false; 
+        }
+    }
+    let isFirstTry5 = true;
+    function CheckSpelling5()
+    {
+        let userAnswer = document.getElementById("FruitName5").value;
+        if (userAnswer.toUpperCase() == "STRAWBERRY")
+        {
+            document.getElementById("message5").innerText = "Superb! Correct Answer";
+            document.getElementById("message5").style.color = "Green";
+            if (isFirstTry5 == true)
+            {
+                score = score + 10;
+                document.getElementById("scoreBoard").innerText = score;
+            }
+            document.getElementById("btn5").disabled = true;
+        }
+        else
+        {
+           document.getElementById("message5").innerText = "Oops! Try Again.";
+           document.getElementById("message5").style.color = "Red";
+           isFirstTry5 = false;  
+        }
+    }
+</script>
+</html>
